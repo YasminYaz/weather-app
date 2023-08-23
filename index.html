@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container mx-auto p-4" style="width: 880px">
+      <nav class="navbar">
+        <form role="search" id="navigation">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <input
+                id="search-input"
+                class="form-control"
+                type="search"
+                placeholder="What's the weather in..."
+              />
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-outline-secondary" type="submit">
+                Search
+              </button>
+              <button
+                id="location"
+                type="button"
+                class="btn btn-outline-secondary ms-1"
+              >
+                📍
+              </button>
+
+              <div
+                class="btn-group ms-1"
+                role="group"
+                aria-label="Basic radio toggle button group"
+              >
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio1"
+                  autocomplete="off"
+                  checked
+                />
+
+                <label class="btn btn-outline-secondary" for="btnradio1"
+                  >°C</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio3"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-secondary" for="btnradio3"
+                  >°F</label
+                >
+              </div>
+              <img
+                class="ms-1"
+                src="images\1292965_155103-OV8NMP-728.jpg"
+                width="15%"
+              />
+            </div>
+          </div>
+        </form>
+      </nav>
+
+      <div class="row align-items-center">
+        <div class="col">
+          <h2 id="city">Tehran</h2>
+          <p id="current-date">Sun, Sep 3, 2023 7:15</p>
+          <img src="images\CCCCCC.png.jpg" width="10%" />
+          <h5 id="weather-description">Sunny</h5>
+        </div>
+        <div class="col"><h1>36°C</h1></div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">◯</h5>
+              <h4 id="wind-speed" class="card-text">8</h4>
+              <h6 class="card-text">Wind</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">◯</h5>
+              <h4 id="humidity" class="card-text">60</h4>
+              <h6 class="card-text">Humidity</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">◯</h5>
+              <h4 id="pressure" class="card-text">1000</h4>
+              <h6 class="card-text">Pressure</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-3">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex">
+              <span class="me-auto">
+                <span class="prediction-icon">◯</span>
+                +38° <span class="lowest-temp">⸺ +22°</span></span
+              >
+              <span class="days">Sunday</span>
+            </li>
+            <li class="list-group-item d-flex">
+              <span class="me-auto">
+                <span class="prediction-icon">◯</span> +37°
+                <span class="lowest-temp">⸺ +24°</span></span
+              >
+              <span class="days">Monday</span>
+            </li>
+            <li class="list-group-item d-flex">
+              <span class="me-auto">
+                <span class="prediction-icon">◯</span> +37°
+                <span class="lowest-temp">⸺ +24°</span></span
+              >
+              <span class="days">Tuesday</span>
+            </li>
+            <li class="list-group-item d-flex">
+              <span class="me-auto">
+                <span class="prediction-icon">◯</span> +38°
+                <span class="lowest-temp">⸺ +24°</span></span
+              >
+              <span class="days">Wednesday</span>
+            </li>
+            <li class="list-group-item d-flex">
+              <span class="me-auto">
+                <span class="prediction-icon">◯</span> +39°
+                <span class="lowest-temp">⸺ +23°</span></span
+              >
+              <span class="days">Thursday</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="credits">Coded by Yasaman Yazdi</p>
+    </div>
+    <script src="src\app.js"></script>
+  </body>
+</html>

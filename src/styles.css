@@ -1,0 +1,36 @@
+body {
+  background: #89b5c2;
+}
+
+h1 {
+  font-size: 120px;
+  font-weight: bolder;
+  text-align: right;
+}
+
+.container {
+  background: rgba(241, 241, 241, 0.2);
+  color: #fff;
+  margin: 4rem auto;
+}
+
+.prediction-icon {
+  margin-right: 16px;
+}
+
+.lowest-temp {
+  color: #b3b3b3;
+  font-weight: 600;
+}
+
+.days {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.credits {
+  color: #cccccc;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  text-align: center;
+}
