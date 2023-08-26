@@ -8,6 +8,10 @@ h1 {
   text-align: right;
 }
 
+a {
+  color: #cccccc;
+}
+
 .container {
   background: rgba(241, 241, 241, 0.2);
   color: #fff;
