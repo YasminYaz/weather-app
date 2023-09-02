@@ -14,28 +14,34 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container mx-auto p-4" style="width: 880px">
-      <nav class="navbar">
-        <form role="search" id="navigation">
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <input
-                id="search-input"
-                class="form-control"
-                type="search"
-                placeholder="What's the weather in..."
-              />
-            </div>
-            <div class="col-md-4">
-              <button class="btn btn-outline-secondary" type="submit">
-                Search
-              </button>
+    <div class="container mx-auto p-4" style="width: 640px">
+      <div class="row align-items-center">
+        <nav class="navbar">
+          <form role="search" id="navigation">
+            <div class="col-8 d-flex">
               <button
                 id="location"
                 type="button"
-                class="btn btn-outline-secondary ms-1"
+                class="btn btn-outline-secondary nav-button"
               >
                 📍
+              </button>
+
+              <input
+                id="search-input"
+                class="form-control ms-1"
+                type="search"
+                style="width: 300px"
+                placeholder="What's the weather in..."
+              />
+            </div>
+
+            <div class="col-4 d-flex justify-content-end">
+              <button
+                class="btn btn-outline-secondary nav-button ms-1"
+                type="submit"
+              >
+                🔎
               </button>
 
               <div
@@ -51,7 +57,6 @@
                   autocomplete="off"
                   checked
                 />
-
                 <label class="btn btn-outline-secondary" for="btnradio1"
                   >°C</label
                 >
@@ -67,24 +72,19 @@
                   >°F</label
                 >
               </div>
-              <img
-                class="ms-1"
-                src="images\1292965_155103-OV8NMP-728.jpg"
-                width="15%"
-              />
             </div>
-          </div>
-        </form>
-      </nav>
+          </form>
+        </nav>
+      </div>
 
       <div class="row align-items-center">
         <div class="col">
-          <h2 id="city">Tehran</h2>
+          <h2 id="city"></h2>
           <p id="current-date">Sun, Sep 3, 2023 7:15</p>
-          <img src="images\CCCCCC.png.jpg" width="10%" />
-          <h5 id="weather-description">Sunny</h5>
+          <img src="" />
+          <h5 id="weather-description"></h5>
         </div>
-        <div class="col"><h1>36°C</h1></div>
+        <div class="col"><h1></h1></div>
       </div>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -92,7 +92,7 @@
           <div class="card text-center">
             <div class="card-body">
               <h5 class="card-title">◯</h5>
-              <h4 id="wind-speed" class="card-text">8</h4>
+              <h4 id="wind-speed" class="card-text">km/h</h4>
               <h6 class="card-text">Wind</h6>
             </div>
           </div>
@@ -101,7 +101,7 @@
           <div class="card text-center">
             <div class="card-body">
               <h5 class="card-title">◯</h5>
-              <h4 id="humidity" class="card-text">60</h4>
+              <h4 id="humidity" class="card-text">%</h4>
               <h6 class="card-text">Humidity</h6>
             </div>
           </div>
@@ -110,14 +110,14 @@
           <div class="card text-center">
             <div class="card-body">
               <h5 class="card-title">◯</h5>
-              <h4 id="pressure" class="card-text">1000</h4>
+              <h4 id="pressure" class="card-text">mb</h4>
               <h6 class="card-text">Pressure</h6>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="card mt-3">
+      <div class="card mt-4">
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex">

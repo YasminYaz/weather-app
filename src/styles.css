@@ -18,8 +18,16 @@ a {
   margin: 4rem auto;
 }
 
+.nav-button {
+  width: 48px;
+}
+
 .prediction-icon {
   margin-right: 16px;
+}
+
+#weather-description:first-letter {
+  text-transform: capitalize;
 }
 
 .lowest-temp {
